@@ -1,11 +1,11 @@
 #!/bin/bash
-file_name="./at_bk.sh"
+file_name="sh at_bk.sh"
 kernel_version="centOS_5.0.2"
 #out_file="../data/"$(date +%Y%m%d)$kernel_version"_at_clx.csv"
 out_file="../data/2019_3_20_"$kernel_version"_at_clx.csv"
 exe_time=5
 #t_num=8
-for t_num in 1 2 4 6 8 10 50 100 200 300 400 500 600 700 800 900 1000
+for t_num in 1 2 4 6 8
 do	
 result=""
 result=$result$($file_name -e $exe_time -t $t_num -d 0 -f)

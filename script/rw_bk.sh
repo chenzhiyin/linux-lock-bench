@@ -52,6 +52,7 @@ if [ -n "$exe_time" -a -n "$rlock_delay" -a -n "$wlock_delay" ];then
 				#vim benchmark.conf
 				#t_num=$(head -1 benchmark.conf)
 				make file_name=../src/lock_code/test_rw_lock_nobind.c exe_name=../src/bin/test_rw_lock_nobind>/dev/null
+				chmod +x ../src/bin/test_rw_lock_nobind
 				../src/bin/test_rw_lock_nobind $exe_time $rt_num $rlock_delay $wt_num $wlock_delay
 				exit 3
 			fi
@@ -75,6 +76,7 @@ fi
 #echo "mode is $mode exe_time:$exe_time t_num:$t_num lock_delay:$lock_delay"
 bash info_deal.sh
 make file_name=../src/lock_code/test_rw_lock.c exe_name=../src/bin/test_rw_lock>/dev/null
+chmod +x ../src/bin/test_rw_lock
 ../src/bin/test_rw_lock $exe_time $rt_num $rlock_delay $wt_num $wlock_delay $mode
 
 

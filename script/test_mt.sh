@@ -1,10 +1,10 @@
 #!/bin/bash
-file_name="./mt_bk.sh"
+file_name="sh mt_bk.sh"
 kernel_version="centOS_5.0.2"
 #out_file="../data/"$(date +%Y%m%d)$kernel_version"_mt_clx.csv"
 out_file="../data/2019_3_20_"$kernel_version"_mt_clx.csv"
 exe_time=5
-for t_num in 1 2 4 6 8 10 50 100 200 300 400 500 600 700 800 900 1000
+for t_num in 1 2 4 6 8
 do
 #t_num=8	
 result=""

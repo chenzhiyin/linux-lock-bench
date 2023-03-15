@@ -48,6 +48,7 @@ if [ -n "$exe_time" -a -n "$lock_delay" ];then
 				#vim benchmark.conf
 				#t_num=$(head -1 benchmark.conf)
 				make file_name=../src/lock_code/test_spin_lock_nobind.c exe_name=../src/bin/test_spin_lock_nobind>/dev/null
+				chmod +x ../src/bin/test_spin_lock_nobind
 				../src/bin/test_spin_lock_nobind $exe_time $t_num $lock_delay
 				exit 3
 			fi
@@ -71,13 +72,5 @@ fi
 #echo "mode is $mode exe_time:$exe_time t_num:$t_num lock_delay:$lock_delay"
 bash info_deal.sh
 make file_name=../src/lock_code/test_spin_lock.c exe_name=../src/bin/test_spin_lock>/dev/null
+chmod +x ../src/bin/test_spin_lock
 ../src/bin/test_spin_lock $exe_time $t_num $lock_delay $mode
-
-
-
-
-
-
-
-
-
