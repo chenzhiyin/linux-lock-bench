@@ -74,7 +74,7 @@ else
 fi
 
 #echo "mode is $mode exe_time:$exe_time t_num:$t_num lock_delay:$lock_delay"
-bash info_deal.sh
+# bash info_deal.sh
 make file_name=../src/lock_code/test_rw_lock.c exe_name=../src/bin/test_rw_lock>/dev/null
 chmod +x ../src/bin/test_rw_lock
 ../src/bin/test_rw_lock $exe_time $rt_num $rlock_delay $wt_num $wlock_delay $mode

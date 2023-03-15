@@ -7,13 +7,14 @@
 	#for j in '0x0c0c' '0x1818' '0x0c18'
 	#do
 		#wrmsr -p 0 0x620 $j
+		file=test-$(date +"%Y-%m-%d-%H-%M")
 		sleep 3
-		sh test_at.sh
+		sh test_at.sh >> ../data/$file 2>&1
 		sleep 3
-		sh test_sl.sh
+		sh test_sl.sh >> ../data/$file 2>&1
 		sleep 3
-		sh test_mt.sh
+		sh test_mt.sh >> ../data/$file 2>&1
 		sleep 3
-		sh test_rw.sh
+		sh test_rw.sh >> ../data/$file 2>&1
 	#done
 # done

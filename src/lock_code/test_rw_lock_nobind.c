@@ -257,7 +257,7 @@ int main(int argc, char *argv[])
 	}
 	
 	lock_counter = nr_rd_lock + nr_wr_lock;
-    printf("%lld,%lld,%lld,",nr_rd_lock/exe_duration,nr_wr_lock/exe_duration,lock_counter/exe_duration);
+    printf("%lld %lld %lld",nr_rd_lock/exe_duration,nr_wr_lock/exe_duration,lock_counter/exe_duration);
 
     return 0;
 }
