@@ -6,6 +6,7 @@ out_file="../data/2019_3_20_"$kernel_version"_rw_clx.csv"
 exe_time=5
 wt_num=0
 for wt_num in 0 1 2 3 4
+do
 for rt_num in 0 1 2 3 4
 do
 #rt_num=8	
