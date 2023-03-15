@@ -98,7 +98,7 @@ void sig_handler(int signo)
 				printf("\nThe thread %d,count:%d\n",i,thread_param[i].count);
 			}//same as no-binding core test
 			printf("lock_counter=%ld\n", lock_counter);
-			clock_gettime(CLOCK_MONOTONIC, &tm_ended);  // Get the monotonic time at the end of the thread      author£ºhh
+			clock_gettime(CLOCK_MONOTONIC, &tm_ended);  // Get the monotonic time at the end of the thread      authorï¿½ï¿½hh
 			printf("starttime:sec:%lld,nsec:%lld\n",tm_start.tv_sec,tm_start.tv_nsec);
 			printf("endtime:sec:%lld,nsec:%lld\n",tm_ended.tv_sec,tm_ended.tv_nsec);
 			printf("running time:%lld\n",(tm_ended.tv_sec-tm_start.tv_sec)*1000000000+tm_ended.tv_nsec-tm_start.tv_nsec);
@@ -179,7 +179,7 @@ int main(int argc, char *argv[])
                 //printf("\nThe thread %d,count:%d\n", j, thread_param[j].count);
                 lock_counter=lock_counter+thread_param[j].count;
         }
-        printf("%lld,",lock_counter/exe_duration);
+        printf("%lld",lock_counter/exe_duration);
 		pthread_mutex_destroy(&__lock);
 
         return 0;

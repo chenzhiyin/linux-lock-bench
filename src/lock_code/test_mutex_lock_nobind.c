@@ -165,7 +165,7 @@ int main(int argc, char *argv[])
 	for (j = 0; j<nr_parallel_threads; j++) {
 		printf("\nThe thread %d,count:%d\n", j, thread_param[j].count);
 	}*/
-	printf("%lld,",lock_counter/exe_duration);
+	printf("%lld",lock_counter/exe_duration);
 	pthread_mutex_destroy(&__lock);
 	return 0;
 }
