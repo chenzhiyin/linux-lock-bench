@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -pthread
+CFLAGS = -pthread -O3 -ffast-math
 
 TARGET = bench
 OBJS = main.o lockbench.o spin.o
