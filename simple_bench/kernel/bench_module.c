@@ -72,7 +72,8 @@ static int mod_init(void)
     set_info("f_version", __builtin_offsetof(struct file, f_version), sizeof(f.f_version),total++);
     set_info("f_security", __builtin_offsetof(struct file, f_security), sizeof(f.f_security),total++);
     set_info("private_data", __builtin_offsetof(struct file, private_data), sizeof(f.private_data),total++);
-    set_info("f_ep", __builtin_offsetof(struct file, f_ep), sizeof(f.f_ep),total++);
+    set_info("f_ep_links", __builtin_offsetof(struct file, f_ep_links), sizeof(f.f_ep_links),total++);
+    set_info("f_tfile_llink", __builtin_offsetof(struct file, f_tfile_llink), sizeof(f.f_tfile_llink),total++);
     set_info("f_mapping", __builtin_offsetof(struct file, f_mapping), sizeof(f.f_mapping),total++);
     set_info("f_wb_err", __builtin_offsetof(struct file, f_wb_err), sizeof(f.f_wb_err),total++);
     set_info("f_sb_err", __builtin_offsetof(struct file, f_sb_err), sizeof(f.f_sb_err),total++);
